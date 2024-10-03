@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock_Paper_Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Rock_Paper_Scissors</h1>
+
+    <section class="options">
+        
+        <div class="piedra"> 
+            <img id="piedra" src="/img/mountain-svgrepo-com (1).svg" alt="">
+        </div>
+        
+        <div class="papel"> 
+            <img id="papel" src="/img/paper-svgrepo-com.svg" alt="">
+        </div>
+        
+        <div class="tijera">
+            <img id="tijera" src="/img/scissors-9-svgrepo-com.svg" alt="">
+        </div>
+        
+
+    </section>
+
+    <section class="panel">
+
+        <div class="ScoreBoard">
+            <div>
+                <p>Score player</p>
+                <p id="scorePlayer">0</p>
+            </div>
+    
+        </div>
+
+        <div class="mega-eleccion">
+
+            <div class="sub-mega">
+                <div class="eleccion">
+                    <p>Player's election</p>
+                    <p id="playerSeleccion"></p>
+                </div>
+            
+                <div class="eleccion">
+                    <p>CPU's election</p>
+                    <p id="computerSelection"></p>
+                </div>
+
+            </div>
+
+            <div class="winner">
+                <p>RESULT:</p>
+                <p id="winnerDisplay"></p> 
+            </div>
+
+        </div>
+
+        <div class="ScoreBoard">   
+            <div>
+                <p>Score CPU</p>
+                <p id="scoreCpu">0</p>
+            </div>
+    
+        </div>
+
+    </section>
+
+    <section class="Mega-finalScore">
+        <div class="finalScore"> 
+            <p>WINNER:</p>
+            <p id="winner"></p>
+            <img src="/img/winner-student-with-competition-trophy-jumping-of-happiness-svgrepo-com (1).svg" alt="">
+            <p>FINAL SCORE:</p>
+            <p id="finalScore"></p>
+            <button id="playAgainBtn">PLAY AGAIN</button>
+        </div>
+
+    </section>
+   
+
+    <script src="/script.js"></script>
+</body>
+</html>
