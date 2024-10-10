@@ -3,11 +3,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(34, 203, 206, 0.466);
+    background-color: rgba(190, 226, 226, 0.958);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
+    
 }
-
+h1 {
+    color:  rgba(9, 57, 57, 0.932);
+    font-weight: bold ;
+}
 .options {
     display: flex;
     justify-content: space-between;
@@ -31,12 +35,12 @@ body {
     padding: 20px;
     cursor: pointer;
     box-shadow: 3px 3px black;
-    background-color: rgba(34, 203, 206, 0.932);
+    background-color: rgba(62, 179, 181, 0.932);
     transition:  box-shadow 0.3s, translate 0.3s;
 }
 
 .options img:hover {
-    background-color: rgba(13, 85, 86, 0.932);
+    background-color: rgba(13, 85, 86);
 }
 
 .options img:active {
@@ -49,8 +53,10 @@ body {
 }
 
 .mega-eleccion {
-    border: solid black 5px;
-    background-color: aliceblue;
+    border: solid rgba(62, 179, 181, 0.932) 2px;
+    box-shadow: 3px 3px rgba(62, 179, 181, 0.932);
+    border-radius: 30px;
+    background-color: rgb(238, 180, 79);
     margin: 20px;
     text-align: center;
 }
@@ -68,9 +74,17 @@ body {
 
 .ScoreBoard {
     display: flex;
-    border: solid black 5px;
-    background-color: aliceblue;
+    border: solid rgba(0, 0, 0, 0) 5px;
+    border-radius: 30px;
+    background-color: rgb(240, 219, 29);
+    border: solid rgba(62, 179, 181, 0.932) 2px;
+    box-shadow: 3px 3px rgba(62, 179, 181, 0.932);
     margin: 20px;
+}
+
+.eleccion, .winner, .ScoreBoard {
+    color:  rgba(9, 57, 57);
+    font-weight: bold ;
 }
 
 .ScoreBoard >div {
@@ -91,22 +105,37 @@ body {
 }
 
 .finalScore {
-    background-color: red;
-    border: solid black 5px;
+    background-color:  rgba(9, 57, 57);;
+    border: solid black 2px;
+    box-shadow: 3px 3px black;
+    border-radius: 30px;
+    color: aliceblue;
+    font-weight: bold ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 400px;
+    width: 450px;
     position: absolute;
-    top: 30%;
-    left: 35%;
+    top: 35%;
+    left: 33%;
 
 }
 
 
 .finalScore img {
-    width: 100px;
+    width: 60px;
     height: auto;
+    fill: aliceblue;
+}
+
+#playAgainBtn {
+    background-color: rgb(238, 180, 79);
+    border: solid black 2px;
+    border-radius: 10px;
+    color: rgba(9, 57, 57);
+    padding: 10px;
+    margin: 15px;
+    cursor: pointer;
 }
