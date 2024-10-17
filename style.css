@@ -39,6 +39,10 @@ h1 {
     transition:  box-shadow 0.3s, translate 0.3s;
 }
 
+.disable-options {
+    pointer-events: none;
+}
+
 .options img:hover {
     background-color: rgba(13, 85, 86);
 }
@@ -138,4 +142,26 @@ h1 {
     padding: 10px;
     margin: 15px;
     cursor: pointer;
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .finalScore {
+        width: 350px;
+        top: 30%;
+        left: 35%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .finalScore {
+        width: 200px;
+        top: 30%;
+        left: 30%;
+    }
+
 }

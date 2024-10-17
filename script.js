@@ -34,6 +34,18 @@ function getComputerChoice() {
         return "tijera"; 
     }
 }
+//enable and disable buttoms//
+function disableButtons() {
+    b_piedra.classList.add('disable-options');
+    b_papel.classList.add('disable-options');
+    b_tijera.classList.add('disable-options');
+}
+
+function enableButtons() {
+    b_piedra.classList.remove('disable-options');
+    b_papel.classList.remove('disable-options');
+    b_tijera.classList.remove('disable-options');
+}
 
 function checkForWinner() {
     //cambio textcontent con la var
@@ -41,15 +53,17 @@ function checkForWinner() {
       finalWinnerDisplay.textContent = "HUMAN"
       finalScore.textContent = humanScore + " - " + computerScore
       // endGameScreen.setAttribute ("style", "display: block")
-      endGameScreen.classList.add('Show-Mega-finalScore')
+      endGameScreen.classList.add('Show-Mega-finalScore');
+      disableButtons();
   } 
   
    //cambio textcontent con getelementbyid
   if (computerScore >= 5) {
       document.getElementById("winner").textContent = "CPU"
       document.getElementById ("finalScore").textContent = `${computerScore} - ${humanScore}`
-      // endGameScreen.setAttribute ("style", "display: block")
-      endGameScreen.classList.add('Show-Mega-finalScore')
+      // endGameScreen.setAttribute ("style", "display: block");
+      endGameScreen.classList.add('Show-Mega-finalScore');
+      disableButtons();
   }
 }
 
@@ -85,34 +99,35 @@ function resetGame() {
     humanScore = 0;
     computerScore = 0;
 
-    scorePlayerDisplay.textContent = humanScore
-    scoreCpuDisplay.textContent = computerScore
+    scorePlayerDisplay.textContent = humanScore;
+    scoreCpuDisplay.textContent = computerScore;
 
-    playerSeleccionDisplay.textContent = ""
-    computerSelectionDisplay.textContent = ""
-    winnerDisplay.textContent = ""
+    playerSeleccionDisplay.textContent = "";
+    computerSelectionDisplay.textContent = "";
+    winnerDisplay.textContent = "";
+
+    enableButtons();
 }
 // ====================== Helper Functions End ======================
 
 // ====================== Main Functions Start ======================
 function playGame(valor_b) {
 
-    let computerSelection = getComputerChoice()
-    let playerSelection = valor_b
+    let computerSelection = getComputerChoice();
+    let playerSelection = valor_b;
 
     playerSeleccionDisplay.textContent = playerSelection;
     computerSelectionDisplay.textContent = computerSelection;
 
-    playRound(computerSelection, playerSelection)
+    playRound(computerSelection, playerSelection);
 
-    checkForWinner()
+    checkForWinner();
 }
 // ====================== Main Functions End ======================
 
 
 // ====================== Event listeners Start ======================
 let b_piedra = document.getElementById("piedra")
-console.log(b_piedra);
 
 function playGamePiedra() {
     playGame("piedra")
@@ -136,3 +151,4 @@ playAgainBtn.addEventListener ("click", resetGame)
 
 let humanScore = 0;
 let computerScore = 0;
+
