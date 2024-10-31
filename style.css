@@ -121,6 +121,7 @@ h1 {
     align-items: center;
     text-align: center;
     width: 450px;
+    height: 360px;
     position: absolute;
     top: 35%;
     left: 33%;
@@ -146,22 +147,66 @@ h1 {
 
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  
 
     .finalScore {
         width: 350px;
         top: 30%;
         left: 35%;
-    }
-
+        }
 }
 
 
 @media (max-width: 768px) {
 
+    body {
+        width: 100%;
+    }
+
+    h1 {
+    font-size: large;
+    text-align: center;
+    }
+
+    .options{
+        width: 40%;
+        margin-right: 20%;
+        }
+
+    .options img {
+        width: 70%;
+        }
+
+    .options div {
+    width: 40%;
+    }
+
+    .panel {
+        flex-direction: column;
+    }
+
+    .sub-mega {
+        flex-direction: column;
+    }
+    
+    
+    .ScoreBoard {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+
     .finalScore {
-        width: 200px;
-        top: 30%;
-        left: 30%;
+        width: 230px;
+        height: 430px;
+        top: 40%;
+        left: 100px;
+        
+        
+        
+        
     }
 
 }
