@@ -3,20 +3,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(190, 226, 226, 0.958);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background: rgb(246,244,244);
+    background: linear-gradient(0deg, rgba(246,244,244,1) 0%, rgba(176,173,185,1) 99%); */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
-    
+    height: 100%;
 }
 h1 {
-    color:  rgba(9, 57, 57, 0.932);
+    color:  rgb(83, 3, 144);
     font-weight: bold ;
 }
-.options {
+/* .options {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
+
+
 
 .options div {
     display: flex;
@@ -24,7 +28,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
+} */
 
 
 .options img {
@@ -35,7 +39,7 @@ h1 {
     padding: 20px;
     cursor: pointer;
     box-shadow: 3px 3px black;
-    background-color: rgba(62, 179, 181, 0.932);
+    background-color: rgba(83, 3, 144, 0.696);
     transition:  box-shadow 0.3s, translate 0.3s;
 }
 
@@ -44,7 +48,7 @@ h1 {
 }
 
 .options img:hover {
-    background-color: rgba(13, 85, 86);
+    background-color: rgba(83, 3, 144, 0.893);
 }
 
 .options img:active {
@@ -52,16 +56,15 @@ h1 {
     translate: 3px 3px;
 }
 
-.panel {
+/* .panel {
     display: flex;
-}
+} */
 
 .mega-eleccion {
-    border: solid rgba(62, 179, 181, 0.932) 2px;
-    box-shadow: 3px 3px rgba(62, 179, 181, 0.932);
+    border: solid rgb(173, 172, 171) 2px;
     border-radius: 30px;
-    background-color: rgb(238, 180, 79);
-    margin: 20px;
+    background-color: rgb(173, 172, 171);
+    /* margin: 20px; */
     text-align: center;
 }
 
@@ -74,20 +77,24 @@ h1 {
 
 .sub-mega {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ScoreBoard {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: solid rgba(0, 0, 0, 0) 5px;
     border-radius: 30px;
-    background-color: rgb(240, 219, 29);
-    border: solid rgba(62, 179, 181, 0.932) 2px;
-    box-shadow: 3px 3px rgba(62, 179, 181, 0.932);
-    margin: 20px;
+    background-color: rgba(173, 172, 171, 0.638);
+    border: solid rgba(173, 172, 171, 0.638) 2px;
+    height: 100%;
+    /* margin: 20px; */
 }
 
 .eleccion, .winner, .ScoreBoard {
-    color:  rgba(9, 57, 57);
+    color:  rgb(0, 7, 7);
     font-weight: bold ;
 }
 
@@ -109,10 +116,9 @@ h1 {
 }
 
 .finalScore {
-    background-color:  rgba(9, 57, 57);;
-    border: solid black 2px;
-    box-shadow: 3px 3px black;
-    border-radius: 30px;
+    background-color:  rgb(30, 3, 80);;
+    border: solid rgb(30, 3, 80) 2px;
+    /* border-radius: 30px; */
     color: aliceblue;
     font-weight: bold ;
     display: flex;
@@ -120,12 +126,11 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 450px;
+    /* width: 450px;
     height: 360px;
     position: absolute;
     top: 35%;
-    left: 33%;
-
+    left: 33%; */
 }
 
 
@@ -136,16 +141,16 @@ h1 {
 }
 
 #playAgainBtn {
-    background-color: rgb(238, 180, 79);
-    border: solid black 2px;
+    background-color: rgb(162, 118, 195);
+    border: solid rgb(162, 118, 195) 2px;
     border-radius: 10px;
-    color: rgba(9, 57, 57);
+    color: white;
     padding: 10px;
     margin: 15px;
     cursor: pointer;
 }
 
-
+/* 
 @media (min-width: 768px) and (max-width: 1199px) {
   
 
@@ -209,4 +214,4 @@ h1 {
         
     }
 
-}
+} */
