@@ -13,9 +13,14 @@ let finalWinnerDisplay = document.getElementById ("winner")
 
 let finalScore = document.getElementById ("finalScore")
 
-let endGameScreen = document.querySelector(".Mega-finalScore")
+// let endGameScreen = document.querySelector(".Mega-finalScore")
 
 let playAgainBtn = document.getElementById ("playAgainBtn")
+
+let modalFinalScore = new bootstrap.Modal('#modalFinalScore', {
+    keyboard: false,
+    backdrop: "static",
+  })
 // ====================== HTML Elements End ======================
 
 
@@ -53,7 +58,10 @@ function checkForWinner() {
       finalWinnerDisplay.textContent = "HUMAN"
       finalScore.textContent = humanScore + " - " + computerScore
       // endGameScreen.setAttribute ("style", "display: block")
-      endGameScreen.classList.add('Show-Mega-finalScore');
+    //   endGameScreen.classList.add('Show-Mega-finalScore');
+
+        modalFinalScore.show ()
+
       disableButtons();
   } 
   
@@ -61,8 +69,10 @@ function checkForWinner() {
   if (computerScore >= 5) {
       document.getElementById("winner").textContent = "CPU"
       document.getElementById ("finalScore").textContent = `${computerScore} - ${humanScore}`
-      // endGameScreen.setAttribute ("style", "display: block");
-      endGameScreen.classList.add('Show-Mega-finalScore');
+        // endGameScreen.setAttribute ("style", "display: block");
+        //   endGameScreen.classList.add('Show-Mega-finalScore');
+
+        modalFinalScore.show ()
       disableButtons();
   }
 }
@@ -95,7 +105,10 @@ function playRound(compuChoice, playerChoice) {
 }
 
 function resetGame() {
-    endGameScreen.classList.remove('Show-Mega-finalScore')
+    // endGameScreen.classList.remove('Show-Mega-finalScore')
+    
+    modalFinalScore.hide ()
+
     humanScore = 0;
     computerScore = 0;
 
